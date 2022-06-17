@@ -30,13 +30,14 @@ async function handleSubmit(e) {
 
     if (response.status === 200) {
         setCurrentUser(data.user)
-        console.log(data.token)
+        console.log(data)
+        localStorage.setItem('token', data.user.passwordDigest)
         history.push(`/`)
     } else {
         setErrorMessage(data.message)
     }
 
-    console.log(data)
+   // console.log(data)
 }
 
     return (
