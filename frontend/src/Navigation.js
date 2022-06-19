@@ -23,7 +23,7 @@ function Navigation() {
         </>
     )
 
-    if (currentUser) {
+    if (currentUser && currentUser.hasOwnProperty('firstName')) {
         loginActions = (
             <li style={{ float: 'right' }}>
                 Logged in as {currentUser.firstName} {currentUser.lastName}

@@ -12,8 +12,10 @@ function CurrentUserProvider({ children }){
                 credentials: 'include'
             })
             let user = await response.json()
-            // let user = await JSON.stringify(response)
+            //let user = await JSON.stringify(response)
+            //if (user !== {}) {
             setCurrentUser(user)
+            //}
         }
         getLoggedInUser()
     })
